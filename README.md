@@ -4,8 +4,8 @@ This is actually a tedious way so i’m going to do it with Python pandas & sqla
 
 Sqlalchemy: the bridge to connect to PostgreSQL.   Address: postgresql+psycopg2://uncutnails:your_password@localhost:port/Building_Permits_KW 
 Postgresql is the language we’re connecting to.
-Psycopg2 library: Python needs a translator to talk to Postgres 
-
+Psycopg2 library: Python needs a translator to talk to Postgresql
+The data was loaded into Postgresql and I opened the data table in pgadmin$ first, then I switched to opening it in DBeaver using the same tree path: databases, file, schemas, public, then table. 
 
 Data Profiling/Sanity Checking:	
 1. Row Count 		2. Primary Key & Duplicates	    3. Completeness Check (Finding NULL Values)
