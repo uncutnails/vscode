@@ -5,7 +5,7 @@ The Problem: Unreasonable delays between submitting an application and getting a
 **APPLICATION DATE to FINAL DATE:** Measure the absolute lifespan of a construction project from its first submission to final sign-off.
 
 **Multiple Linear Regression model, Chronological Train-Validation-Test Split (60% / 20% / 20%).**
-### 4. Predictive Machine Learning Extension (Scikit-Learn Pipeline)
+Predictive Machine Learning Extension (Scikit-Learn Pipeline)
 *   **The Predictive Goal**: Move from historical reporting to forward-looking resource allocation by predicting total permit processing time (Duration in days) at the exact moment a developer submits an application.
 *   **Feature Leakage Prevention Constraints**: 
 To maintain strict real-world validity, the feature matrix X is entirely restricted to information known at the municipal intake desk at the exact moment of submission, such as WORK_TYPE, WARD, initial CONSTRUCTION_VALUE, and APPLICATION_MONTH. Any metrics recorded later in the permit lifecycle—such as FINAL_DATE or late-stage inspection remarks—are strictly excluded. This strict boundary prevents data leakage and ensures the model simulates a true production environment capable of forecasting processing delays for newly incoming applications.
