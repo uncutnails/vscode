@@ -1,3 +1,7 @@
 *.sql linguist-detectable=true
 *.sql linguist-language=SQL
-*.tmdl linguist-language=Power-BI-TMDL
+*.tmdl linguist-language=PowerQuery
+*.json linguist-language=PowerQuery
+*.tmdl linguist-detectable=true
+*.json linguist-generated=true
+diagramLayout.json binary
