@@ -1,3 +1,5 @@
+_**THERE ARE 3 HYPOTHESES WORKED IN HERE**_
+
 **Hypothesis #1: Permit Bureaucracy Bottleneck (Processing Delays)**
 The Problem: Unreasonable delays between submitting an application and getting approval hold up housing construction. Measuring exactly where these delays happen can pinpoint municipal inefficiency.
 **APPLICATION DATE to ISSUE DATE:** Calculate the duration (in days) to see how long it takes for a permit to get approved.
