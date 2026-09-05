@@ -11,5 +11,13 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["permits_eda_insights","permits_modeling_data"]
+
+ref table permits_eda_insights
+ref table DateTableTemplate_05d343d7-ab84-4b4d-adb0-a6f96c9d2c8c
+ref table LocalDateTable_05ad0754-faa8-414d-8583-9269bfd1ba55
+ref table permits_modeling_data
+ref table LocalDateTable_a0f009b1-ab6b-47e9-bff0-bc4baa78c7ae
+
 ref cultureInfo en-CA
 

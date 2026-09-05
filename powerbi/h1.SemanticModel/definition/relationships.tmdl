@@ -1,0 +1,10 @@
+relationship 263d2560-f8d7-40df-8980-ae74cee17ab7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: permits_eda_insights.APPLICATION_DATE
+	toColumn: LocalDateTable_05ad0754-faa8-414d-8583-9269bfd1ba55.Date
+
+relationship 10a98cae-d6eb-4656-8983-cc0953883cc2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: permits_modeling_data.APPLICATION_DATE
+	toColumn: LocalDateTable_a0f009b1-ab6b-47e9-bff0-bc4baa78c7ae.Date
+

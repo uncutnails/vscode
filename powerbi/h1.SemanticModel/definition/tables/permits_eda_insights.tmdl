@@ -1,0 +1,101 @@
+table permits_eda_insights
+	lineageTag: 63c574e4-ebe2-4d2e-8d26-df4c7cd70cf1
+
+	column APPLICATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 482dc7ab-d5db-44b1-9fa7-27e639a3607a
+		summarizeBy: none
+		sourceColumn: APPLICATION_DATE
+
+		variation Variation
+			isDefault
+			relationship: 263d2560-f8d7-40df-8980-ae74cee17ab7
+			defaultHierarchy: LocalDateTable_05ad0754-faa8-414d-8583-9269bfd1ba55.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CONSTRUCTION_VALUE_CLEAN
+		dataType: int64
+		formatString: 0
+		lineageTag: 7615f261-7b4b-4391-8cc0-b68c424b04f5
+		summarizeBy: sum
+		sourceColumn: CONSTRUCTION_VALUE_CLEAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERMIT_TYPE_CLEAN
+		dataType: string
+		lineageTag: 358f5aa0-e6f5-45b8-9858-0bf6bd0769d4
+		summarizeBy: none
+		sourceColumn: PERMIT_TYPE_CLEAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column WORK_TYPE_CLEAN
+		dataType: string
+		lineageTag: f93c0876-6234-4884-980a-e2760d6f6f86
+		summarizeBy: none
+		sourceColumn: WORK_TYPE_CLEAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column WARD
+		dataType: int64
+		formatString: 0
+		lineageTag: 1dd81817-c27b-4b3c-bbfa-e1faa39051d3
+		summarizeBy: sum
+		sourceColumn: WARD
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPLICATION_MONTH
+		dataType: int64
+		formatString: 0
+		lineageTag: 8686aedd-7bc0-4a92-8d41-16c4f7035ad7
+		summarizeBy: sum
+		sourceColumn: APPLICATION_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPROVAL_DURATION
+		dataType: int64
+		formatString: 0
+		lineageTag: be690683-017f-4364-9215-3beb5f9bc883
+		summarizeBy: sum
+		sourceColumn: APPROVAL_DURATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column FINAL_YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 178f96c7-43cc-4f20-b1ee-d11c2c698622
+		summarizeBy: sum
+		sourceColumn: FINAL_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROJECT_DURATION
+		dataType: int64
+		formatString: 0
+		lineageTag: a5bce278-3204-4e5b-9a72-4dd0377d59bb
+		summarizeBy: sum
+		sourceColumn: PROJECT_DURATION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition permits_eda_insights = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\sophi\OneDrive\Documents\vscode\powerbi\permits_eda_insights.csv"),[Delimiter=",", Columns=9, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"APPLICATION_DATE", type date}, {"CONSTRUCTION_VALUE_CLEAN", Int64.Type}, {"PERMIT_TYPE_CLEAN", type text}, {"WORK_TYPE_CLEAN", type text}, {"WARD", Int64.Type}, {"APPLICATION_MONTH", Int64.Type}, {"APPROVAL_DURATION", Int64.Type}, {"FINAL_YEAR", Int64.Type}, {"PROJECT_DURATION", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
