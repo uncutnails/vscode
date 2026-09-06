@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "1cf20263463848484ac6",
+  "position": {
+    "x": 995,
+    "y": 672.5,
+    "z": 8000,
+    "height": 312.5,
+    "width": 880,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Approval Time measures municipal processing velocity from submission to issuance. Spikes in institutional types heavily impact the baseline metric.",
+                    "textStyle": {
+                      "fontFamily": "Georgia",
+                      "fontSize": "32pt",
+                      "color": "#ffffff"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,96 @@
+table permits_data
+	lineageTag: a7aeaa33-5ebb-48dd-829b-9feab9d3b072
+
+	measure 'Total Permits Issued' = COUNTROWS('permits_data')
+		formatString: 0
+		lineageTag: 8b7fbc68-fbc8-4532-975d-9d8cea659f94
+
+	column APPLICATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0a5ce1a9-16e9-4338-a67f-cdbd7148c511
+		summarizeBy: none
+		sourceColumn: APPLICATION_DATE
+
+		variation Variation
+			isDefault
+			relationship: df3ec410-9339-41b7-af2d-25bb76f6a862
+			defaultHierarchy: LocalDateTable_ceac2b37-aa59-478d-884c-2da62594c15c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CONSTRUCTION_VALUE_CLEAN
+		dataType: int64
+		formatString: 0
+		lineageTag: f0d1ae8a-a59e-43d5-b999-36560789db50
+		summarizeBy: sum
+		sourceColumn: CONSTRUCTION_VALUE_CLEAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column PERMIT_TYPE_CLEAN
+		dataType: string
+		lineageTag: 04d645d0-dc05-450b-ba7b-7e968833967a
+		summarizeBy: none
+		sourceColumn: PERMIT_TYPE_CLEAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column WORK_TYPE_CLEAN
+		dataType: string
+		lineageTag: 2575706e-224c-4f12-9996-91b93583d8cd
+		summarizeBy: none
+		sourceColumn: WORK_TYPE_CLEAN
+
+		annotation SummarizationSetBy = Automatic
+
+	column WARD
+		dataType: int64
+		formatString: 0
+		lineageTag: 65a6940e-4cc3-4b3b-bc1b-a1f1195286ad
+		summarizeBy: sum
+		sourceColumn: WARD
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPLICATION_MONTH
+		dataType: int64
+		formatString: 0
+		lineageTag: 0dab3d9c-1057-49ff-87e3-16267a0c1f2b
+		summarizeBy: sum
+		sourceColumn: APPLICATION_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPROVAL_DURATION
+		dataType: int64
+		formatString: 0
+		lineageTag: 8512926f-d305-441f-959e-6beba0ba6b87
+		summarizeBy: sum
+		sourceColumn: APPROVAL_DURATION
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPLICATION_YEAR
+		dataType: int64
+		formatString: 0
+		lineageTag: 8766ade2-e39b-4bbc-a818-59c101711d88
+		summarizeBy: sum
+		sourceColumn: APPLICATION_YEAR
+
+		annotation SummarizationSetBy = Automatic
+
+	partition permits_data = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\sophi\OneDrive\Documents\vscode\powerbi\permits_data.csv"),[Delimiter=",", Columns=8, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"APPLICATION_DATE", type date}, {"CONSTRUCTION_VALUE_CLEAN", Int64.Type}, {"PERMIT_TYPE_CLEAN", type text}, {"WORK_TYPE_CLEAN", type text}, {"WARD", Int64.Type}, {"APPLICATION_MONTH", Int64.Type}, {"APPROVAL_DURATION", Int64.Type}, {"APPLICATION_YEAR", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

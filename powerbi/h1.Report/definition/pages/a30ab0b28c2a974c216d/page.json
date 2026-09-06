@@ -4,5 +4,72 @@
   "displayName": "Tree Prediction",
   "displayOption": "FitToPage",
   "height": 1080,
-  "width": 1920
+  "width": 1920,
+  "pageBinding": {
+    "name": "5f944f392231680f171e",
+    "type": "Default",
+    "parameters": []
+  },
+  "visualInteractions": [
+    {
+      "source": "53ac8f52e6e3313eeb39",
+      "target": "97a2017ff9c7d3d4bb6f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "53ac8f52e6e3313eeb39",
+      "target": "d07e237f6e51ad27e846",
+      "type": "NoFilter"
+    },
+    {
+      "source": "53ac8f52e6e3313eeb39",
+      "target": "91943ca9332790c1afba",
+      "type": "NoFilter"
+    },
+    {
+      "source": "97a2017ff9c7d3d4bb6f",
+      "target": "d07e237f6e51ad27e846",
+      "type": "NoFilter"
+    },
+    {
+      "source": "97a2017ff9c7d3d4bb6f",
+      "target": "91943ca9332790c1afba",
+      "type": "NoFilter"
+    },
+    {
+      "source": "97a2017ff9c7d3d4bb6f",
+      "target": "53ac8f52e6e3313eeb39",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d07e237f6e51ad27e846",
+      "target": "97a2017ff9c7d3d4bb6f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d07e237f6e51ad27e846",
+      "target": "91943ca9332790c1afba",
+      "type": "NoFilter"
+    },
+    {
+      "source": "d07e237f6e51ad27e846",
+      "target": "53ac8f52e6e3313eeb39",
+      "type": "NoFilter"
+    },
+    {
+      "source": "91943ca9332790c1afba",
+      "target": "d07e237f6e51ad27e846",
+      "type": "NoFilter"
+    },
+    {
+      "source": "91943ca9332790c1afba",
+      "target": "97a2017ff9c7d3d4bb6f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "91943ca9332790c1afba",
+      "target": "53ac8f52e6e3313eeb39",
+      "type": "NoFilter"
+    }
+  ]
 }
