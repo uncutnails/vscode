@@ -16,7 +16,6 @@ annotation PBI_QueryOrder = ["permits_data"]
 ref table permits_data
 ref table DateTableTemplate_65c7457a-727b-4edd-bc18-c4821896dba2
 ref table LocalDateTable_ceac2b37-aa59-478d-884c-2da62594c15c
-ref table 'Simulated Construction Value'
 
 ref cultureInfo en-CA
 

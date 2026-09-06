@@ -30,7 +30,8 @@
               "nativeQueryRef": "APPLICATION_MONTH",
               "active": true
             }
-          ]
+          ],
+          "showAll": true
         }
       }
     },
@@ -146,7 +147,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "1L"
+                                "Value": "4L"
                               }
                             }
                           ]

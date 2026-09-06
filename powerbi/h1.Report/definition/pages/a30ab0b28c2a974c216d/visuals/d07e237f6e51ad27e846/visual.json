@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "d07e237f6e51ad27e846",
   "position": {
-    "x": 117.5,
-    "y": 457.5,
+    "x": 122.5,
+    "y": 450,
     "z": 7000,
     "height": 123.33333333333334,
     "width": 743.33333333333337,
@@ -30,7 +30,8 @@
               "nativeQueryRef": "WORK_TYPE_CLEAN",
               "active": true
             }
-          ]
+          ],
+          "showAll": true
         }
       }
     },
@@ -146,7 +147,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Addition'"
+                                "Value": "'Systems & Utilities'"
                               }
                             }
                           ]
