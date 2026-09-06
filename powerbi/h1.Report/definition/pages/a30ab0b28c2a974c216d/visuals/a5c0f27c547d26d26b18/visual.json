@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "e5d15f12fe2f19995f6a",
+  "name": "a5c0f27c547d26d26b18",
   "position": {
-    "x": 47.5,
-    "y": 1022.5,
-    "z": 11000,
-    "height": 57.5,
-    "width": 1625,
-    "tabOrder": 11000
+    "x": 122.5,
+    "y": 722.5,
+    "z": 11001,
+    "height": 225,
+    "width": 742.5,
+    "tabOrder": 11001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,9 @@
               {
                 "textRuns": [
                   {
-                    "value": "Model: HistGradientBoostingRegressor (Adjusted R²: 0.32 | MAE: 9 Days | RMSE: 11 Days). Trained on City of Waterloo Open Data.",
+                    "value": "Predictions are optimized for standard developments (under $400k in construction value & estimated 60 days of approvla duration baseline). ",
                     "textStyle": {
-                      "fontFamily": "Cambria",
+                      "fontFamily": "Georgia",
                       "fontSize": "24pt",
                       "color": "#ffffff"
                     }
