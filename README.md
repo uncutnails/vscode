@@ -51,3 +51,10 @@ To ensure the model reflects modern municipal workflows and avoids predicting ba
 
 *  _Successful Tree Model Prediction Performance:_
 HistGradientBoosting was the top-performing model. The optimized gradient boosting model successfully achieved a Validation Adjusted R2 of 0.3240. Crucially for city stakeholders, it delivered a Mean Absolute Error (MAE) of just 9.02 days and a Root Mean Squared Error (RMSE) of 11.73 days. Explaining nearly 32.4% of the operational variance while maintaining an average error margin under two business weeks makes this model highly viable for integration into internal city planning dashboards or public-facing tracking portals.
+
+* _POWERBI Presentation:_
+Page 1: Building Permits Exploratory Data Analysis. At the top of the page is the title and two slicers: by Ward (1-10) and Year (2016-2026). The first row of the page are three cards showing three insights: average approval duration, total construction value, and total permits issued (created from DAX). The second row shows two horizontal bar graphs: average approval duration by permit type, and average approval duration by work type. The last row shows a line graph detailing the seasonal trend of approval times by month.
+
+Page 2: Permit approval time predictor tool. This page utilizes the tree regression model I used to predict approval duration based on 5 variables: ward, permit type, work type, application month, and construction value. On this page, there are 4 dropdowns for users to select: ward, permit type, work type, and application month. All of these dropdowns had their fields edited to "show items with no data" in order for the dropdowns' selections to omit one another depending on what the user input is. 
+In order to get the prediction on approval duration, a column of predictions was generated & recorded as a column in the final modelling dataset before it was imported into Powerbi. This column was dragged into a Card visual, and so the 4 dropdown generated average predicted approval duration depending on the user's selection.
+
