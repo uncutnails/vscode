@@ -173,7 +173,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Avg Approval by Permit Type'"
+                  "Value": "'Avg Approval Duration by Permit Type'"
                 }
               }
             },

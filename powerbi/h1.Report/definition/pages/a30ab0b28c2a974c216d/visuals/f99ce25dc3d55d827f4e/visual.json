@@ -28,11 +28,11 @@
                       "Property": "PREDICTED_APPROVAL_DURATION"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
               "queryRef": "Sum(permits_data.PREDICTED_APPROVAL_DURATION)",
-              "nativeQueryRef": "Sum of PREDICTED_APPROVAL_DURATION"
+              "nativeQueryRef": "Average of PREDICTED_APPROVAL_DURATION"
             }
           ]
         }
@@ -52,7 +52,7 @@
                     "Property": "PREDICTED_APPROVAL_DURATION"
                   }
                 },
-                "Function": 0
+                "Function": 1
               }
             },
             "direction": "Descending"

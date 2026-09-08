@@ -140,7 +140,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Avg Approval by Work Type'"
+                  "Value": "'Avg Approval Duration by Work Type'"
                 }
               }
             },
